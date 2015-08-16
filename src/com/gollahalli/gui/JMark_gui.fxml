@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@resource/JMark_gui.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <MenuBar prefHeight="0.0" prefWidth="800.0">
         <menus>
@@ -31,7 +32,68 @@
          <top>
             <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <items>
-                <Button mnemonicParsing="false" text="Button" />
+                <Button fx:id="left_align_btn" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+                     <tooltip>
+                        <Tooltip text="Left Align" />
+                     </tooltip>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="center_align_btn" layoutX="10.0" layoutY="11.0" mnemonicParsing="false">
+                     <tooltip>
+                        <Tooltip text="Center Align" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="right_align_btn" layoutX="32.0" layoutY="11.0" mnemonicParsing="false">
+                     <tooltip>
+                        <Tooltip text="Right Align" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="justify_btn" layoutX="54.0" layoutY="11.0" mnemonicParsing="false">
+                     <tooltip>
+                        <Tooltip text="Justify" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="bold_btn" layoutX="76.0" layoutY="11.0" mnemonicParsing="false">
+                     <tooltip>
+                        <Tooltip text="Bold" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="italic_btn" layoutX="98.0" layoutY="11.0" mnemonicParsing="false">
+                     <tooltip>
+                        <Tooltip text="Italic" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="underline_btn" layoutX="120.0" layoutY="11.0" mnemonicParsing="false">
+                     <tooltip>
+                        <Tooltip text="Underline" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="number_btn" layoutX="142.0" layoutY="11.0" mnemonicParsing="false">
+                     <tooltip>
+                        <Tooltip text="Numbering" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="table_btn" layoutX="164.0" layoutY="11.0" mnemonicParsing="false">
+                     <tooltip>
+                        <Tooltip text="Table" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="bullets_btn" layoutX="186.0" layoutY="11.0" mnemonicParsing="false">
+                     <tooltip>
+                        <Tooltip text="Bullets" />
+                     </tooltip>
+                  </Button>
+                  <Separator prefHeight="30.0" prefWidth="374.0" visible="false" />
+                  <Button fx:id="preview_btn" layoutX="208.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" text="Preview" textAlignment="CENTER">
+                     <tooltip>
+                        <Tooltip text="Preview" />
+                     </tooltip>
+                  </Button>
               </items>
             </ToolBar>
          </top>
