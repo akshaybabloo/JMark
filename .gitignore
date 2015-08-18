@@ -10,6 +10,7 @@
 
 # User-specific stuff:
 # .idea/workspace.xml
+/src/META-INF/
 # .idea/tasks.xml
 # .idea/dictionaries
 
