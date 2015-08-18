@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="jmark_anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@resource/JMark_gui.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gollahalli.main.controller.controller">
    <children>
-      <MenuBar fx:id="jmark_menuBar" prefHeight="0.0" prefWidth="800.0">
+      <MenuBar fx:id="jmark_menuBar" prefHeight="0.0" prefWidth="800.0" AnchorPane.bottomAnchor="571.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -45,7 +45,8 @@
           </Menu>
         </menus>
       </MenuBar>
-      <BorderPane fx:id="jmark_borderPane" layoutY="29.0" prefHeight="570.0" prefWidth="800.0">
+      <Separator fx:id="jmark_separator" layoutY="28.0" prefHeight="4.0" prefWidth="800.0" AnchorPane.bottomAnchor="568.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0" />
+      <BorderPane fx:id="jmark_borderPane" layoutY="36.0" prefHeight="569.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <top>
             <ToolBar fx:id="jmark_toolBar" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <items>
