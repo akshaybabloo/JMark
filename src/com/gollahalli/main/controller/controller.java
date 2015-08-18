@@ -2,10 +2,10 @@ package com.gollahalli.main.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Font;
 
 
 /**
@@ -52,6 +52,31 @@ public class controller {
             jmark_borderPane.setPrefSize(800,600);
             jmark_borderPane.setLayoutY(0.0);
         }
+        Font f = Font.loadFont(getClass().getResourceAsStream("/com/gollahalli/gui/resource/FontAwesome.otf"), 20);
+
+        left_align_btn.setFont(f);
+        center_align_btn.setFont(f);
+        right_align_btn.setFont(f);
+        justify_btn.setFont(f);
+        bold_btn.setFont(f);
+        italic_btn.setFont(f);
+        underline_btn.setFont(f);
+        number_btn.setFont(f);
+        table_btn.setFont(f);
+        bullets_btn.setFont(f);
+        preview_btn.setFont(f);
+
+        left_align_btn.setText('\uf036' + "");
+        center_align_btn.setText('\uf037' + "");
+        right_align_btn.setText('\uf038' + "");
+        justify_btn.setText('\uf039' + "");
+        bold_btn.setText('\uf032' + "");
+        italic_btn.setText('\uf033' + "");
+        underline_btn.setText('\uf0cd' + "");
+        number_btn.setText('\uf0cb' + "");
+        table_btn.setText('\uf0ce' + "");
+        bullets_btn.setText('\uf0ca' + "");
+        preview_btn.setText('\uf06e' + "");
 
         left_align_btn.setOnAction(event -> {
             System.out.println(jmark_textArea.getSelectedText());
