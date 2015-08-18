@@ -1,5 +1,6 @@
 package com.gollahalli.main.controller;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuBar;
@@ -52,7 +53,17 @@ public class controller {
             jmark_borderPane.setPrefSize(800,600);
             jmark_borderPane.setLayoutY(0.0);
         }
-        Font f = Font.loadFont(getClass().getResourceAsStream("/com/gollahalli/gui/resource/FontAwesome.otf"), 20);
+
+        Platform.runLater(new Runnable() {
+                              @Override
+                              public void run() {
+                                  jmark_textArea.requestFocus();
+                              }
+                          });
+
+        // above code can be written as Platform.runLater(() -> jmark_textArea.requestFocus());
+
+                Font f = Font.loadFont(getClass().getResourceAsStream("/com/gollahalli/gui/resource/FontAwesome.otf"), 20);
 
         left_align_btn.setFont(f);
         center_align_btn.setFont(f);
@@ -77,6 +88,8 @@ public class controller {
         table_btn.setText('\uf0ce' + "");
         bullets_btn.setText('\uf0ca' + "");
         preview_btn.setText('\uf06e' + "");
+
+//        jmark_textArea.requestFocus();
 
         left_align_btn.setOnAction(event -> {
             System.out.println(jmark_textArea.getSelectedText());
