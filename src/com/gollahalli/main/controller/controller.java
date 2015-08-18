@@ -4,14 +4,13 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.Separator;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
 
 
-/**
- * Created by akshayrajgollahalli on 16/08/15.
- */
+
 public class controller {
 
     @FXML
@@ -43,6 +42,9 @@ public class controller {
     @FXML
     private Button preview_btn;
 
+    @FXML
+    private Separator jmark_separator;
+
 
 
     @FXML
@@ -52,7 +54,10 @@ public class controller {
             jmark_menuBar.useSystemMenuBarProperty().set(true);
             jmark_borderPane.setPrefSize(800,600);
             jmark_borderPane.setLayoutY(0.0);
+
+            jmark_separator.setVisible(false);
         }
+
 
         Platform.runLater(new Runnable() {
                               @Override
