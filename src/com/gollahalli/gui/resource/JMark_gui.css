@@ -219,3 +219,25 @@
 .text-area .scroll-pane .content{
     -fx-background-color: transparent;
 }
+
+/*menubar*/
+/*#jmark_menuBar{*/
+    /*-fx-background-color: rgb(60,63,65);*/
+/*}*/
+
+#jmark_menuBar {
+    -fx-background-color: rgb(60,63,65);
+}
+
+.context-menu {
+    -fx-background-color: rgb(60,63,65);
+}
+
+.menu-bar .label {
+    -fx-text-fill: rgb(187,187,187);
+}
+
+/*.menu .left-container {*/
+    /*-fx-background-color: black;*/
+/*}*/
+
