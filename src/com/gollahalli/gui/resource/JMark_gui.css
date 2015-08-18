@@ -1,89 +1,211 @@
+/*buttons*/
 #left_align_btn{
     -fx-background-image: url("py_left.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
+}
+
+#left_align_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#left_align_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
 }
 
 #center_align_btn{
     -fx-background-image: url("py_cent.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
+}
+#center_align_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#center_align_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
 }
 
 #right_align_btn{
     -fx-background-image: url("py_right.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
+}
+#right_align_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#right_align_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
 }
 
 #justify_btn{
     -fx-background-image: url("py_just.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
+}
+#justify_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#justify_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
 }
 
 #bold_btn{
     -fx-background-image: url("bold17.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
+}
+#bold_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#bold_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
 }
 
 #italic_btn{
     -fx-background-image: url("italic6.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
+}
+#italic_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#italic_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
 }
 
 #underline_btn{
     -fx-background-image: url("letteru.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
+}
+#underline_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#underline_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
 }
 
 #number_btn{
     -fx-background-image: url("numbered8.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
+}
+#number_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#number_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
 }
 
 #table_btn{
     -fx-background-image: url("table41.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
 }
+#table_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#table_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
+}
 
 #bullets_btn{
     -fx-background-image: url("list3.png");
+    -fx-background-color: rgb(60,63,65);
     -fx-background-size: 18 18;
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
     -fx-pref-width:30px;
     -fx-pref-height:30px;
+}
+#bullets_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#bullets_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
+}
+
+#preview_btn{
+    -fx-background-color: rgb(60,63,65);
+    -fx-text-fill: rgb(187,187,187);
+}
+#preview_btn:hover{
+    -fx-background-color: rgb(53,55,57);
+}
+#preview_btn:pressed{
+    -fx-background-color: rgb(44,46,47);
+    -fx-text-fill: rgb(255,255,255);
+}
+
+
+/*panes*/
+#jmark_borderPane{
+    -fx-background-color: rgb(43,43,43);
+}
+
+#jmark_anchor{
+    -fx-background-color: rgb(43,43,43);
+}
+
+
+/*toolbar*/
+#jmark_toolBar{
+    -fx-background-color: rgb(60,63,65);
+}
+
+
+/*text area*/
+.text-area {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgb(169,183,198);
+    -fx-highlight-fill: rgb(33,66,131);
+    -fx-highlight-text-fill: rgb(169,183,198);
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
 }
