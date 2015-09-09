@@ -1,14 +1,25 @@
 package com.gollahalli.main.controller;
 
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.Separator;
-import javafx.scene.control.TextArea;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.effect.BoxBlur;
+import javafx.scene.effect.Effect;
+import javafx.scene.effect.GaussianBlur;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.stage.Window;
 
+import java.io.IOException;
 
 
 public class controller {
@@ -19,6 +30,7 @@ public class controller {
     private BorderPane jmark_borderPane;
     @FXML
     private TextArea jmark_textArea;
+
     @FXML
     private Button left_align_btn;
     @FXML
@@ -44,6 +56,15 @@ public class controller {
 
     @FXML
     private Separator jmark_separator;
+
+    @FXML
+    private MenuItem jmark_about;
+
+    @FXML
+    private Window window;
+
+    @FXML
+    private AnchorPane jmark_anchor;
 
 
 
@@ -96,8 +117,36 @@ public class controller {
 
 //        jmark_textArea.requestFocus();
 
-        left_align_btn.setOnAction(event -> {
-            System.out.println(jmark_textArea.getSelectedText());
+        left_align_btn.setOnAction(event -> System.out.println(jmark_textArea.getSelectedText()));
+
+        jmark_about.setOnAction(event -> {
+            Stage stage = new Stage();
+            Parent root = null;
+            try {
+                BoxBlur bb = new BoxBlur();
+                GaussianBlur gb = new GaussianBlur();
+                gb.setRadius(5.5);
+                jmark_anchor.setEffect(gb);
+                root = FXMLLoader.load(getClass().getResource("/com/gollahalli/gui/JMark_about.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Scene scene = new Scene(root);
+//            stage.initStyle(StageStyle.TRANSPARENT);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.show();
+//            scene.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+//                @Override
+//                public void handle(MouseEvent event) {
+//                    stage.close();
+//                }
+//            });
+
+
+
+            stage.setOnCloseRequest(event1 -> jmark_anchor.setEffect(null));
+
         });
     }
 
