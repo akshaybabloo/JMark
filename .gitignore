@@ -8,19 +8,19 @@
 .idea/
 # if you remove the above rule, at least ignore the following:
 
-# User-specific stuff:
-# .idea/workspace.xml
-/src/META-INF/
-# .idea/tasks.xml
-# .idea/dictionaries
+ User-specific stuff:
+ .idea/workspace.xml
+# /src/META-INF/
+ .idea/tasks.xml
+ .idea/dictionaries
 *.ai
 
-# Sensitive or high-churn files:
-# .idea/dataSources.ids
-# .idea/dataSources.xml
-# .idea/sqlDataSources.xml
-# .idea/dynamic.xml
-# .idea/uiDesigner.xml
+ Sensitive or high-churn files:
+ .idea/dataSources.ids
+ .idea/dataSources.xml
+ .idea/sqlDataSources.xml
+ .idea/dynamic.xml
+ .idea/uiDesigner.xml
 
 # Gradle:
 # .idea/gradle.xml
