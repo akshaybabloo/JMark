@@ -14,10 +14,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
+import com.github.rjeschke.txtmark.Processor;
 
 import java.io.IOException;
 
@@ -115,9 +118,7 @@ public class controller {
         bullets_btn.setText('\uf0ca' + "");
         preview_btn.setText('\uf06e' + "");
 
-//        jmark_textArea.requestFocus();
-
-        left_align_btn.setOnAction(event -> System.out.println(jmark_textArea.getSelectedText()));
+//        preview_btn.setOnAction(event -> System.out.println(jmark_textArea.getSelectedText()));
 
         jmark_about.setOnAction(event -> {
             Stage stage = new Stage();
@@ -132,22 +133,48 @@ public class controller {
                 e.printStackTrace();
             }
             Scene scene = new Scene(root);
-//            stage.initStyle(StageStyle.TRANSPARENT);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(scene);
             stage.show();
-//            scene.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
-//                @Override
-//                public void handle(MouseEvent event) {
-//                    stage.close();
-//                }
-//            });
-
-
 
             stage.setOnCloseRequest(event1 -> jmark_anchor.setEffect(null));
+        });
+
+        preview_btn.setOnAction(event -> {
+            String a = jmark_textArea.getText();
+            String result = Processor.process(a);
+
+            Stage stage = new Stage();
+            Parent root = null;
+            try {
+                BoxBlur bb = new BoxBlur();
+                GaussianBlur gb = new GaussianBlur();
+                gb.setRadius(5.5);
+                jmark_anchor.setEffect(gb);
+                root = FXMLLoader.load(getClass().getResource("/com/gollahalli/gui/JMark_webview.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Scene scene = new Scene(root, 1024, 768);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(scene);
+            stage.show();
+
+            final WebView browser = new WebView();
+            browser.setPrefSize(1024, 768);
+            final WebEngine webEngine = browser.getEngine();
+
+            ScrollPane scrollPane = (ScrollPane)scene.lookup("#scroll");
+            scrollPane.setPannable(true);
+            scrollPane.setContent(browser);
+
+            webEngine.loadContent(result);
+            stage.setOnCloseRequest(event1 -> jmark_anchor.setEffect(null));
+
+
 
         });
+
     }
 
 }

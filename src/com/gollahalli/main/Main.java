@@ -18,7 +18,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/com/gollahalli/gui/JMark_gui.fxml"));
         Scene scene = new Scene(root, 800, 600);
 
-        primaryStage.getIcons().add(new Image("com/gollahalli/gui/resource/jm-32.png"));
+        primaryStage.getIcons().add(new Image("com/gollahalli/gui/resource/jm-16.png"));
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.setTitle("JMark");
