@@ -10,8 +10,10 @@
 
 # User-specific stuff:
 # .idea/workspace.xml
+/src/META-INF/
 # .idea/tasks.xml
 # .idea/dictionaries
+*.ai
 
 # Sensitive or high-churn files:
 # .idea/dataSources.ids
