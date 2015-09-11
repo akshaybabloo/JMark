@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: com.gollahalli.main.Main
+Application-Name: JMark
+Application-Description: A markdown application based on Java
+Application-Version: 0.1
+Created-By: Akshay Raj Gollahalli
+Bundle-Icon: com/gollahalli/gui/resource/jm-32.png
