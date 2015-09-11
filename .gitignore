@@ -57,7 +57,7 @@ crashlytics-build.properties
 .mtj.tmp/
 
 # Package Files #
-!/lib/txtmark-0.13.jar
+!txtmark-0.13.jar
 *.jar
 *.war
 *.ear
