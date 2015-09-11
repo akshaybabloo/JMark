@@ -57,7 +57,7 @@ crashlytics-build.properties
 
 # Package Files #
 !txtmark-0.13.jar
-*.jar
+#*.jar
 *.war
 *.ear
 
@@ -69,6 +69,5 @@ hs_err_pid*
 ### Example user template
 
 # IntelliJ project files
-out
 gen
 
