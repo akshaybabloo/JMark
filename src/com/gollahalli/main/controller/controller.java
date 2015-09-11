@@ -1,16 +1,14 @@
 package com.gollahalli.main.controller;
 
+import com.github.rjeschke.txtmark.Processor;
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.effect.BoxBlur;
-import javafx.scene.effect.Effect;
 import javafx.scene.effect.GaussianBlur;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
@@ -18,9 +16,7 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.stage.Window;
-import com.github.rjeschke.txtmark.Processor;
 
 import java.io.IOException;
 
@@ -70,13 +66,12 @@ public class controller {
     private AnchorPane jmark_anchor;
 
 
-
     @FXML
-    private void initialize(){
+    private void initialize() {
         String os = System.getProperty("os.name");
-        if (os != null && os.startsWith("Mac")){
+        if (os != null && os.startsWith("Mac")) {
             jmark_menuBar.useSystemMenuBarProperty().set(true);
-            jmark_borderPane.setPrefSize(800,600);
+            jmark_borderPane.setPrefSize(800, 600);
             jmark_borderPane.setLayoutY(0.0);
 
             jmark_separator.setVisible(false);
@@ -84,15 +79,15 @@ public class controller {
 
 
         Platform.runLater(new Runnable() {
-                              @Override
-                              public void run() {
-                                  jmark_textArea.requestFocus();
-                              }
-                          });
+            @Override
+            public void run() {
+                jmark_textArea.requestFocus();
+            }
+        });
 
         // above code can be written as Platform.runLater(() -> jmark_textArea.requestFocus());
 
-                Font f = Font.loadFont(getClass().getResourceAsStream("/com/gollahalli/gui/resource/FontAwesome.otf"), 20);
+        Font f = Font.loadFont(getClass().getResourceAsStream("/com/gollahalli/gui/resource/FontAwesome.otf"), 20);
 
         left_align_btn.setFont(f);
         center_align_btn.setFont(f);
@@ -164,13 +159,12 @@ public class controller {
             browser.setPrefSize(1024, 768);
             final WebEngine webEngine = browser.getEngine();
 
-            ScrollPane scrollPane = (ScrollPane)scene.lookup("#scroll");
+            ScrollPane scrollPane = (ScrollPane) scene.lookup("#scroll");
             scrollPane.setPannable(true);
             scrollPane.setContent(browser);
 
             webEngine.loadContent(result);
             stage.setOnCloseRequest(event1 -> jmark_anchor.setEffect(null));
-
 
 
         });
