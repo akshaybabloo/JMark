@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="javafx" name="JMarkMac">
-    <output-path>$PROJECT_DIR$/out/artifacts/JMarkMac</output-path>
+  <artifact type="javafx" name="JMark">
+    <output-path>$PROJECT_DIR$/out/artifacts/JMark</output-path>
     <properties id="javafx-properties">
       <options>
         <option name="appClass" value="com.gollahalli.main.Main" />
@@ -16,6 +16,9 @@
     <root id="root">
       <element id="archive" name="JMarkMac.jar">
         <element id="module-output" name="JMark" />
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="txtmark-0.13" />
+        </element>
       </element>
     </root>
   </artifact>

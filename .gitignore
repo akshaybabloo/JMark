@@ -71,3 +71,7 @@ hs_err_pid*
 # IntelliJ project files
 gen
 
+.DS_Store
+.idea/uiDesigner.xml
+.idea/dictionaries/akshayrajgollahalli.xml
+.idea/workspace.xml
